@@ -13,7 +13,7 @@ function prompt_user() {
 
 function compute_kde()
 {
-	var current_data = document.getElementById("Displayer");
+	var current_data = document.getElementById("Displayer").innerHTML.split(",");
 	const transformed_data = new Array();
 
 	/// Traversal and transformation fo elements
@@ -24,7 +24,6 @@ function compute_kde()
 	}
 
 	// Changing HTML
-	console.log(transformed_data)
 	document.getElementById('Display_KDE').innerHTML = transformed_data;
 
 }
